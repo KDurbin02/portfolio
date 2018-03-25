@@ -36,19 +36,20 @@
   onScroll = function() {
     if (!toggle && window.scrollY > 0) {
       profile.className = 'logo nav__logo small';
-      toggle = !toggle;
+      toggle = true;
     }else if (window.scrollY <= 0) {
       profile.className = 'logo nav__logo';
-      toggle = !toggle;
+      toggle = false;
     }
   };
 
   init = function(e) {
     var i, _i, _results;
+    profile = document.getElementById('photo');
     canvas = document.getElementById('c');
     ctx = canvas.getContext('2d');
+    onScroll();
     onResize();
-    profile = document.getElementById('photo');
     window.addEventListener('resize', onResize);
     if (profile) window.addEventListener('scroll', onScroll);
   };
