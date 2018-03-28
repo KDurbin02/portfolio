@@ -15,8 +15,8 @@
     transform: translateX(-2px); }
   60% {
     transform: translateX(2px); } }
-* {
-  box-sizing: border-box; }
+/* * {
+  box-sizing: border-box; } */
 
 html, body {
   margin: 0;
@@ -92,6 +92,7 @@ nav {
 .nav__logo img {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 
 .nav__list {
@@ -214,40 +215,28 @@ nav {
 
 .episode {
   position: relative;
-  display: flex; }
-  .episode:nth-child(1) .episode__image {
-    background-image: url(../images/photos/edited/1.png); }
-  .episode:nth-child(2) .episode__image {
-    background-image: url(../images/photos/edited/2.png); }
-  .episode:nth-child(3) .episode__image {
-    background-image: url(../images/photos/edited/3.png); }
-  .episode:nth-child(4) .episode__image {
-    background-image: url(../images/photos/edited/4.png); }
-  .episode:hover .episode__detail:before {
-    width: 100%; }
-  .episode:hover:nth-child(1) .episode__image {
-    background-image: url(../images/photos/original/1.png); }
-  .episode:hover:nth-child(2) .episode__image {
-    background-image: url(../images/photos/original/2.png); }
-  .episode:hover:nth-child(3) .episode__image {
-    background-image: url(../images/photos/original/3.png); }
-  .episode:hover:nth-child(4) .episode__image {
-    background-image: url(../images/photos/original/4.png); }
+  display: flex;
+  margin: 15px 50px;
+}
 
 
 .episode__image {
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  background: #57816d;
   transition: all .1s ease-in-out;
   display: block; }
 
+.web_image {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}  
+
 .episode__media {
   position: relative;
-  width: 30%;
   transition: .2s ease-out; }
-  .episode__media:after {
+  /* .episode__media:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -255,7 +244,7 @@ nav {
     background-image: url("../images/pixel-corner.svg");
     width: 50px;
     height: 50px;
-    background-size: cover; }
+    background-size: cover; } */
   .episode__media:hover {
     transform-origin: 0 50%;
     transform: perspective(1000px) rotateY(-10deg) translate3d(-3px, 0, 0); }
@@ -385,7 +374,7 @@ nav {
     float: left;
     margin: 1.5rem 1rem 0 0;
     border-radius: 2px; }
-  .right .playBtn {
+  .right {
     display: none; } }
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
@@ -443,12 +432,12 @@ nav {
   .episodes {
     display: flex;
     flex-wrap: wrap;
-    margin: 160px 0 0 50px;
+    margin: 110px 0 0 40px;
     max-width: 800px; }
 
   .episode {
     flex-direction: column;
-    max-width: 220px;
+    width: 300px;
     margin-right: 2rem;
     margin-bottom: 3rem; }
     .episode:hover .episode__detail:before {
@@ -457,10 +446,9 @@ nav {
   .episode__number {
     display: block; }
 
-  .episode__media {
+  /* .episode__media {
     width: 100%;
-    height: 294px;
-    max-width: 200px; }
+  }  */
 
   .episode__detail {
     width: 100%; }
