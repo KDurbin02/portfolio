@@ -55,14 +55,11 @@ footer {
   display: flex;
   padding: .5rem 2rem;
   font-size: 1rem;
-  font-weight: 300; }
+  font-weight: 300;
+  text-align: right }
   footer .footer__content {
     width: 60%; }
-  footer .footer__logo {
-    width: 40%;
-    text-align: right;
-    align-self: center;
-    margin-top: 0.5rem 0 -0.5rem 0; }
+
 
 .hidden {
   opacity: 0; }
@@ -514,18 +511,4 @@ nav {
   .site__secondary_title {
     display: block; }
 
-  /* audio player */
-  .site__playbar {
-    background: white;
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1); }
-
-  .audio-player {
-    position: inherit;
-    background-color: white;
-    margin-right: 5rem;
-    border-radius: 4px; } }
-@media only screen and (min-width: 1400px) {
-  .right .site__description {
-    column-count: 2; } }
-
-/*# sourceMappingURL=dropcast.css.map */
+  
